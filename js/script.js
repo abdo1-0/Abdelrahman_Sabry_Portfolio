@@ -165,4 +165,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Infinite Reviews Scroll (التعديل الجديد) ---
+    // قم بتغيير '.reviews-track' إلى الكلاس الخاص بالحاوية (Container) التي تضم التقييمات في الـ HTML الخاص بك
+    const reviewsTrack = document.querySelector('.reviews-track'); 
+    if (reviewsTrack) {
+        // هذا السطر يأخذ التقييمات الحالية وينسخها ويضعها بجوار التقييمات الأصلية
+        const originalContent = reviewsTrack.innerHTML;
+        reviewsTrack.insertAdjacentHTML('beforeend', originalContent);
+    }
+
 });
