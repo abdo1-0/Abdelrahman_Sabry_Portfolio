@@ -11,10 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -33,7 +33,8 @@
                 <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#contact" class="btn-nav">Contact Me</a></li>
                 <li class="nav-controls">
-                    <button id="theme-toggle" aria-label="Toggle Dark Mode" class="icon-btn"><i class="fas fa-sun"></i></button>
+                    <button id="theme-toggle" aria-label="Toggle Dark Mode" class="icon-btn"><i
+                            class="fas fa-sun"></i></button>
                 </li>
             </ul>
         </div>
@@ -45,7 +46,8 @@
             <div class="hero-text-content">
                 <h2 class="animate-fade-up delay-1">Hello, I'm</h2>
                 <h1 class="animate-fade-up delay-2">Abdelrahman Sabry</h1>
-                <h3 class="animate-fade-up delay-3"><span>Professional</span> <span class="text-gradient">Video Editor</span></h3>
+                <h3 class="animate-fade-up delay-3"><span>Professional</span> <span class="text-gradient">Video
+                        Editor</span></h3>
                 <p class="hero-text animate-fade-up delay-4">
                     Crafting cinematic narratives that captivate audiences. With over 3 years of experience, I specialize in transforming raw footage
                     into high-impact visual stories for YouTube, social media, and digital brands.
@@ -91,6 +93,7 @@
         <div class="container">
             <h2 class="section-title">My <span class="accent">Skills</span></h2>
             <div class="services-grid">
+                <!-- Video Editing Card -->
                 <div class="service-card animate-on-scroll">
                     <i class="fas fa-video service-icon"></i>
                     <h3>Video Editing</h3>
@@ -101,6 +104,7 @@
                         <li>Commercial Editing</li>
                     </ul>
                 </div>
+                <!-- Visual & Audio Card -->
                 <div class="service-card animate-on-scroll">
                     <i class="fas fa-photo-video service-icon"></i>
                     <h3>Visual & Audio</h3>
@@ -111,6 +115,7 @@
                         <li>Audio Cleanup & Mixing</li>
                     </ul>
                 </div>
+                <!-- Tools & Tech Card -->
                 <div class="service-card animate-on-scroll">
                     <i class="fas fa-tools service-icon"></i>
                     <h3>Tools & Tech</h3>
@@ -121,6 +126,7 @@
                         <li>Adobe Audition</li>
                     </ul>
                 </div>
+                <!-- Workstation & Performance Card -->
                 <div class="service-card animate-on-scroll">
                     <i class="fas fa-laptop-code service-icon"></i>
                     <h3>Workstation & Power</h3>
@@ -152,6 +158,7 @@
                             Professional cinematic video editing projects including YouTube,
                             documentaries, commercials, and social media content.
                         </p>
+                        <!-- Google Drive Link -->
                         <a href="https://drive.google.com/drive/folders/1Dkjwgm28O_obpVQcEv3bQ90yQC9t6vxc?usp=drive_link"
                             class="btn-link drive-link" target="_blank">
                             <i class="fab fa-google-drive"></i>
@@ -171,17 +178,20 @@
                 <div class="service-card animate-on-scroll">
                     <i class="fas fa-play-circle service-icon"></i>
                     <h3>YouTube Production</h3>
-                    <p>I specialize in YouTube growth editing, short-form content such as Reels and Shorts, as well as cinematic and brand-focused video editing.</p>
+                    <p>I specialize in YouTube growth editing, short-form content such as Reels and Shorts, as well as
+                        cinematic and brand-focused video editing.</p>
                 </div>
                 <div class="service-card animate-on-scroll">
                     <i class="fas fa-bolt service-icon"></i>
                     <h3>Shorts & Reels</h3>
-                    <p>Punchy, fast-paced editing for Instagram Reels and TikTok designed to grab attention instantly.</p>
+                    <p>Punchy, fast-paced editing for Instagram Reels and TikTok designed to grab attention instantly.
+                    </p>
                 </div>
                 <div class="service-card animate-on-scroll">
                     <i class="fas fa-film service-icon"></i>
                     <h3>Cinematic Editing</h3>
-                    <p>Advanced color grading, sound design, and narrative pacing for documentaries, trailers, and commercials.</p>
+                    <p>Advanced color grading, sound design, and narrative pacing for documentaries, trailers, and
+                        commercials.</p>
                 </div>
                 <div class="service-card animate-on-scroll">
                     <i class="fas fa-shapes service-icon"></i>
@@ -192,138 +202,128 @@
         </div>
     </section>
 
-    <!-- Client Reviews Section (Animated Marquee) -->
-    <section id="reviews" class="section">
-        <div class="container" style="max-width: 100%; padding: 0;">
-            <h2 class="section-title">Client <span class="accent">Reviews</span></h2>
-            
-            <div class="reviews-slider">
-                <div class="reviews-track" id="reviews-track">
-                    <!-- Review 1 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"Abdelrahman created a stunning 6-second logo reveal for our jewelry brand, Sofia Silver. The motion graphics and lighting were exactly what we needed for a high-end look."</p>
-                        <h4 class="reviewer-name">— Sarah M., Brand Director</h4>
+    <!-- Client Reviews Section (Real Auto-Scrolling Marquee) -->
+    <section id="reviews" class="section testimonials-section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 2.5rem;">Client <span class="accent">Feedback</span></h2>
+        </div>
+        
+        <div class="marquee-container">
+            <div class="marquee-track">
+                <!-- Review 1 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <!-- Review 2 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"The promotional storyboards and video montages he did for our date palm nursery were phenomenal. He knows exactly how to highlight specific varieties like Barhi."</p>
-                        <h4 class="reviewer-name">— Ahmed T., Marketing Manager</h4>
+                    <p class="testimonial-text">"شغل محترم جداً وسرعة في التسليم. عبد الرحمن فاهم يعني ايه رتم وقص يشد المشاهد من أول ثانية، غير إن الـ Color grading كان عالي جداً."</p>
+                    <div class="client-info">
+                        <h4>محمود إبراهيم</h4>
+                        <span>صانع محتوى يوتيوب</span>
                     </div>
-                    <!-- Review 3 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"I needed a professional visual storyboard and editing for my career development reels. Abdelrahman delivered exactly that. My engagement has skyrocketed."</p>
-                        <h4 class="reviewer-name">— David R., Career Coach</h4>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <!-- Review 4 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"Top-tier color grading! Transformed my raw footage into a cinematic masterpiece. The pacing was absolutely perfect."</p>
-                        <h4 class="reviewer-name">— Omar K., YouTube Creator</h4>
+                    <p class="testimonial-text">"Absolute professional! Delivered 4K footage edits on tight deadlines without single stutter. His transitions and audio mixing are top-tier."</p>
+                    <div class="client-info">
+                        <h4>Marcus Vance</h4>
+                        <span>Digital Agency Lead</span>
                     </div>
-                    <!-- Review 5 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"Fast delivery, incredible sound design. He truly understands how to mix audio to make the visuals hit harder."</p>
-                        <h4 class="reviewer-name">— Jessica L., Filmmaker</h4>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <!-- Review 6 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"The pacing in his edits keeps retention high. Best editor I've worked with when it comes to audience psychology."</p>
-                        <h4 class="reviewer-name">— Mike D., Content Creator</h4>
+                    <p class="testimonial-text">"بجد تسلم إيدك يا عبد الرحمن، الموشن جرافيك اللي عملته للفيديو التجاري بسّط الفكرة جداً للعملاء بتوعنا وزود المبيعات."</p>
+                    <div class="client-info">
+                        <h4>أحمد السعدني</h4>
+                        <span>مدير تسويق رقمي</span>
                     </div>
-                    <!-- Review 7 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"Incredible attention to detail in After Effects. The vector animations were so smooth and professional."</p>
-                        <h4 class="reviewer-name">— Nour H., Agency Owner</h4>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <!-- Review 8 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"Took our commercial from boring to engaging with just some clever visual hooks and dynamic transitions."</p>
-                        <h4 class="reviewer-name">— Tarek S., E-commerce Brand</h4>
+                    <p class="testimonial-text">"Working with Abdelrahman was a breeze. He takes direction extremely well and adds his own creative cinematic touch that elevates the whole project."</p>
+                    <div class="client-info">
+                        <h4>Sarah Jenkins</h4>
+                        <span>YouTube Creator (100k+ Subs)</span>
                     </div>
-                    <!-- Review 9 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"Outstanding workflow and communication. Highly recommend for any long-form YouTube documentaries."</p>
-                        <h4 class="reviewer-name">— Chris W., YouTuber</h4>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <!-- Review 10 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"His short-form edits are punchy and dynamic. I gained over 10k followers directly from the reels he edited."</p>
-                        <h4 class="reviewer-name">— Elena V., Influencer</h4>
+                    <p class="testimonial-text">"من أفضل الناس اللي تعاملت معهم في المونتاج. دقيق جداً في مواعيد التسليم وبيستجيب للتعديلات بصدر رحب ومن غير إزعاج."</p>
+                    <div class="client-info">
+                        <h4>كريم الشريف</h4>
+                        <span>منتج ومصور فوتوغرافي</span>
                     </div>
-                    <!-- Review 11 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"Clean audio mixing and perfect transitions. A true professional who takes feedback gracefully and executes flawlessly."</p>
-                        <h4 class="reviewer-name">— Youssef A., Podcaster</h4>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <!-- Review 12 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"Understands visual storytelling better than anyone I know. The way he cuts to the beat is just amazing."</p>
-                        <h4 class="reviewer-name">— Rachel B., Director</h4>
+                    <p class="testimonial-text">"His sound design and pacing for our documentary trailer gave everyone goosebumps. Highly recommended for any heavy cinematic work!"</p>
+                    <div class="client-info">
+                        <h4>David Alpert</h4>
+                        <span>Film Director</span>
                     </div>
-                    <!-- Review 13 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"He doesn't just edit; he strategizes. The storyboard he provided before editing saved us so much production time."</p>
-                        <h4 class="reviewer-name">— Hassan F., Startup Founder</h4>
+                </div>
+
+                <!-- Duplicated Loop Track for Smooth Infinite Scrolling -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <!-- Review 14 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"Perfect manipulation of vector icons and typography for our explainer video. Complex topics became so easy to digest."</p>
-                        <h4 class="reviewer-name">— Daniel C., Tech Lead</h4>
+                    <p class="testimonial-text">"شغل محترم جداً وسرعة في التسليم. عبد الرحمن فاهم يعني ايه رتم وقص يشد المشاهد من أول ثانية، غير إن الـ Color grading كان عالي جداً."</p>
+                    <div class="client-info">
+                        <h4>محمود إبراهيم</h4>
+                        <span>صانع محتوى يوتيوب</span>
                     </div>
-                    <!-- Review 15 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"Delivered a heavy 4K project flawlessly and ahead of schedule. His hardware setup clearly makes a huge difference."</p>
-                        <h4 class="reviewer-name">— Amina S., Producer</h4>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <!-- Review 16 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"The rhythm of his cuts is just so natural. He makes editing look easy, which is the mark of a true pro."</p>
-                        <h4 class="reviewer-name">— Liam P., Vlogger</h4>
+                    <p class="testimonial-text">"Absolute professional! Delivered 4K footage edits on tight deadlines without single stutter. His transitions and audio mixing are top-tier."</p>
+                    <div class="client-info">
+                        <h4>Marcus Vance</h4>
+                        <span>Digital Agency Lead</span>
                     </div>
-                    <!-- Review 17 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"Brought my travel vlog to life. The color grading on the landscape shots was absolutely insane!"</p>
-                        <h4 class="reviewer-name">— Sophie M., Travel Creator</h4>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <!-- Review 18 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"Highly skilled in Premiere Pro. Handled a massive multi-cam podcast project for us without breaking a sweat."</p>
-                        <h4 class="reviewer-name">— Khaled N., Event Organizer</h4>
+                    <p class="testimonial-text">"بجد تسلم إيدك يا عبد الرحمن، الموشن جرافيك اللي عملته للفيديو التجاري بسّط الفكرة جداً للعملاء بتوعنا وزود المبيعات."</p>
+                    <div class="client-info">
+                        <h4>أحمد السعدني</h4>
+                        <span>مدير تسويق رقمي</span>
                     </div>
-                    <!-- Review 19 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"If you want cinematic quality and someone who actually cares about the final product, Abdelrahman is your guy."</p>
-                        <h4 class="reviewer-name">— Emma T., Creative Director</h4>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <!-- Review 20 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"Professional, creative, and extremely reliable. Finding a good editor is hard, but finding a great one is rare. He is great."</p>
-                        <h4 class="reviewer-name">— Mark J., Business Coach</h4>
-                    </div>
-                    <!-- Review 21 -->
-                    <div class="review-card">
-                        <i class="fas fa-quote-left service-icon quote-icon"></i>
-                        <p class="review-text">"His work on our short promotional videos completely changed our marketing game. The ROI was phenomenal."</p>
-                        <h4 class="reviewer-name">— Farah E., Boutique Owner</h4>
+                    <p class="testimonial-text">"Working with Abdelrahman was a breeze. He takes direction extremely well and adds his own creative cinematic touch that elevates the whole project."</p>
+                    <div class="client-info">
+                        <h4>Sarah Jenkins</h4>
+                        <span>YouTube Creator (100k+ Subs)</span>
                     </div>
                 </div>
             </div>
@@ -335,11 +335,15 @@
         <div class="container contact-container">
             <div class="contact-info animate-on-scroll">
                 <h2 class="section-title text-left">Let's <span class="accent">Collaborate</span></h2>
-                <p>Ready to take your video content to the next level? Get in touch and let's create something cinematic.</p>
+                <p>Ready to take your video content to the next level? Get in touch and let's create something
+                    cinematic.</p>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/abdo.elfhham2" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/abdelrahman_edits/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/201228410093" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/abdo.elfhham2" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/abdelrahman_edits/" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/201228410093" target="_blank" aria-label="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
                 </div>
                 <div class="detail-item">
                      <i class="fas fa-envelope"></i>
@@ -369,7 +373,20 @@
             <a href="#hero" class="back-to-top">Back to Top <i class="fas fa-arrow-up"></i></a>
         </div>
     </footer>
-    
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="video-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="video-wrapper">
+                <video id="modal-video-player" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
     <script src="js/script.js"></script>
 </body>
+
 </html>
