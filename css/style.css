@@ -1,13 +1,9 @@
 :root {
     /* Color System - Dark Mode (Default) */
     --primary: #1E90FF;
-    /* Electric Blue */
     --secondary: #0A0A0A;
-    /* Deep Black */
     --accent: #00E5FF;
-    /* Neon Cyan */
     --neutral: #F4F4F4;
-    /* Soft Grey */
 
     /* Semantic Variables */
     --bg-body: var(--secondary);
@@ -21,7 +17,6 @@
 }
 
 [data-theme="light"] {
-    /* Light Mode Overrides */
     --bg-body: var(--neutral);
     --bg-card: #FFFFFF;
     --bg-alt: #EAEAEA;
@@ -59,12 +54,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
-}
-
-.rtl-text {
-    direction: rtl;
-    text-align: right;
-    unicode-bidi: embed;
 }
 
 .section {
@@ -305,12 +294,8 @@ h4 {
 }
 
 @keyframes glowPulse {
-    from {
-        box-shadow: 0 0 30px rgba(30, 144, 255, 0.2);
-    }
-    to {
-        box-shadow: 0 0 50px rgba(0, 229, 255, 0.4);
-    }
+    from { box-shadow: 0 0 30px rgba(30, 144, 255, 0.2); }
+    to { box-shadow: 0 0 50px rgba(0, 229, 255, 0.4); }
 }
 
 .hero-section h2 {
@@ -391,7 +376,7 @@ h4 {
     gap: 0.5rem;
 }
 
-/* Services & Grid */
+/* Services Grid */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -429,7 +414,7 @@ h4 {
     font-size: 0.95rem;
 }
 
-/* --- Client Feedback / Testimonials Marquee Styling --- */
+/* --- Client Feedback / Testimonials Marquee Styling (Fixed Loop) --- */
 .testimonials-section {
     overflow: hidden;
     position: relative;
@@ -450,6 +435,7 @@ h4 {
     display: flex;
     gap: 2rem;
     width: max-content;
+    padding-right: 2rem;
     animation: scrollMarquee 35s linear infinite;
 }
 
@@ -512,7 +498,7 @@ html[dir="rtl"] .testimonial-text {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-50% - 1rem));
+        transform: translateX(-50%);
     }
 }
 
@@ -611,6 +597,75 @@ html[dir="rtl"] .testimonial-text {
 
 .back-to-top:hover {
     color: var(--primary);
+}
+
+/* Video Modal Styles (Fixed hidden state) */
+.video-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.video-modal.show {
+    opacity: 1;
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    background: #000;
+    border-radius: 16px;
+    box-shadow: 0 0 60px rgba(0, 229, 255, 0.25);
+    border: 1px solid rgba(0, 229, 255, 0.1);
+    transform: scale(0.9);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+}
+
+.video-modal.show .modal-content {
+    transform: scale(1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 2001;
+}
+
+.close-modal:hover {
+    color: var(--accent);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
+.video-wrapper video,
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: none;
 }
 
 /* Animations */
@@ -784,75 +839,4 @@ html[dir="rtl"] .career-objective-box {
 
 html[dir="rtl"] .timeline-item {
     flex-direction: row-reverse;
-}
-/* ===============================
-   VIDEO MODAL STYLES (FIX)
-   =============================== */
-.video-modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(8px);
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.video-modal.show {
-    opacity: 1;
-    display: flex;
-}
-
-.modal-content {
-    position: relative;
-    width: 90%;
-    max-width: 1000px;
-    background: #000;
-    border-radius: 16px;
-    box-shadow: 0 0 60px rgba(0, 229, 255, 0.25);
-    border: 1px solid rgba(0, 229, 255, 0.1);
-    transform: scale(0.9);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    overflow: hidden;
-}
-
-.video-modal.show .modal-content {
-    transform: scale(1);
-}
-
-/* زر الإغلاق (علامة X) */
-.close-modal {
-    position: absolute;
-    top: 0px;
-    right: 15px;
-    color: #fff;
-    font-size: 2.5rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    z-index: 2001;
-}
-
-.close-modal:hover {
-    color: var(--accent);
-}
-
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background: #000;
-}
-
-.video-wrapper video,
-.video-wrapper iframe {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border: none;
 }
